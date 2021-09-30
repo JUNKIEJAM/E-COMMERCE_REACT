@@ -14,9 +14,9 @@ const data = {
       },
       {
         _id: '2',
-        name: 'Adidas Fit Shirt',
+        name: 'The Watcher',
         category: 'Shirts',
-        image: '/images/p1.jpg',
+        image: '/images/p2.jpeg',
         price: 100,
         countInStock: 20,
         brand: 'Adidas',
