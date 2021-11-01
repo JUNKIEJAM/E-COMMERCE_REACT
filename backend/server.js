@@ -1,14 +1,14 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
-import dotenv from 'dotenv';
 
 dotenv.config();
 
 const app = express();
-app.use(express.json());   //body of http request , by running this command we adda neew middleware whihc is passing json data in thr body of request
-app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
   useNewUrlParser: true,
