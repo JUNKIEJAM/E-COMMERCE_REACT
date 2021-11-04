@@ -5,6 +5,15 @@ import { isAuth } from '../utils.js';
 
 const orderRouter = express.Router();
 
+orderRouter.get(
+  '/mine',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({ user: req.user._id });
+    res.send(orders);
+  })
+);
+
 orderRouter.post(
   '/',
   isAuth,
@@ -30,8 +39,8 @@ orderRouter.post(
   })
 );
 
-orderRouter.get( '/:id', isAuth, expressAsyncHandler(async (req, res) => {  //isAuth is a middleware
-    const order = await Order.findById(req.params.id);     //getting order from database using await
+orderRouter.get('/:id', isAuth, expressAsyncHandler(async (req, res) => {  //isAuth is a middleware
+    const order = await Order.findById(req.params.id);   //getting order from database using await
     if (order) {
       res.send(order);
     } else {
