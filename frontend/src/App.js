@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { signout } from './actions/userActions';
+import PrivateRoute from './components/PrivateRoute';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
@@ -29,7 +30,7 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-              amazona
+              Path Koli
             </Link>
           </div>
           <div>
@@ -61,6 +62,29 @@ function App() {
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
+            {userInfo && userInfo.isAdin &&(
+              <div className="dropdown">
+                <Link to="#admin">Admin{' '}
+                <i className=" fa fa-caret-down">
+                  </i></Link>
+                  <ul className="dropdown-content">
+                    <li>
+                      <Link to="/dashboard">Dashboard</Link>
+                    </li>
+
+                    <li>
+                      <Link to="/productlist">Product List</Link>
+                    </li>
+                    <li>
+                      <Link to="/orderlist">Order List</Link>
+                    </li>
+                    <li>
+                      <Link to="/userlist">User List</Link>
+                    </li>
+                  </ul>
+                </div>
+
+            )}
           </div>
         </header>
         <main>
@@ -73,7 +97,10 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
-          <Route path="/profile" component={ProfileScreen}></Route>
+          <PrivateRoute
+            path="/profile"
+            component={ProfileScreen}
+          ></PrivateRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
