@@ -6,7 +6,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "repository": {
     "type": "git",
@@ -48,7 +47,5 @@
     "nodemon": "^2.0.14"
   },
 
-  "engines": {
-    "node": "10.16.0"
-}
+
 }
