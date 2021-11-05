@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "repository": {
     "type": "git",
@@ -45,5 +46,9 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.26.0",
     "nodemon": "^2.0.14"
-  }
+  },
+
+  "engines": {
+    "node": "10.16.0"
+}
 }
