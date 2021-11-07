@@ -46,19 +46,12 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.26.0",
     "nodemon": "^2.0.14"
-<<<<<<< HEAD
   },
 
-    "engines": {"node":"16.3.0", 
-      "npm": "7.16.0"}
-=======
- },
-
-    "engines": {
+  "engines": {
       "node":"16.3.0", 
       "npm": "7.16.0"
     }
->>>>>>> 9c7f64b96d7cd4e57bd7f660c1300be2f55553d6
 
 
 }
