@@ -35,10 +35,13 @@
     "jsonschema": "^1.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^4.2.8",
+    "node-modules": "^1.0.1",
     "object": "^0.1.1",
     "phoenix": "^1.6.2",
     "react-redux": "^7.2.5",
     "redux": "^4.1.1",
+    "remove": "^0.1.5",
+    "remove-node-modules": "^1.7.6",
     "utils-js": "^0.1.1"
   },
   "devDependencies": {
@@ -47,11 +50,8 @@
     "eslint-plugin-react": "^7.26.0",
     "nodemon": "^2.0.14"
   },
-
   "engines": {
-      "node":"16.3.0", 
-      "npm": "7.16.0"
-    }
-
-
+    "node": "16.3.0",
+    "npm": "7.16.0"
+  }
 }

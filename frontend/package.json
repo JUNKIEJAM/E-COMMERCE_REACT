@@ -22,6 +22,7 @@
     "react-scripts": "4.0.3",
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0",
+    "remove-node-modules": "^1.7.6",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -48,5 +49,8 @@
       "last 1 safari version"
     ]
   },
-  "engines": {"node":"16.3.0", "npm": "7.16.0"}
+  "engines": {
+    "node": "16.3.0",
+    "npm": "7.16.0"
+  }
 }
